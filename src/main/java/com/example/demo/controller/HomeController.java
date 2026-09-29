@@ -17,8 +17,10 @@ public class HomeController {
         return "index";
     }
 
-    @PostMapping("/hello")
-    public String hello(@ModelAttribute GreetingForm greetingForm) {
+	@PostMapping("/hello")
+    public String hello(@ModelAttribute GreetingForm greetingForm, Model model) {
+        // Den Namen aus dem GreetingForm in die Model-Attribute setzen
+        model.addAttribute("name", greetingForm.getName());
         return "hello";
     }
 }
