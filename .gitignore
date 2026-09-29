@@ -6,7 +6,6 @@ pom.xml.versionsBackup
 release.properties
 
 # Java
-*.class
 *.log
 hs_err_pid*
 
