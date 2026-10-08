@@ -14,17 +14,21 @@ import java.util.Optional;
 public class PersonService {
 
 	private PersonRepository personRepository;
-	
+
 	private final PersonMapper personMapper; // Injektion des Mappers
 
-	public PersonService(PersonRepository personRepository,PersonMapper personMapper) {
+	public PersonService(PersonRepository personRepository, PersonMapper personMapper) {
 		this.personRepository = personRepository;
 		this.personMapper = personMapper;
-		
+
+	}
+
+	public List<Person> getAllPersons() {
+		return personRepository.findAll().stream().filter(person -> person.getId().equals(1)).toList();
 	}
 	
-	public List<Person> getAllPersons() {
-		return personRepository.findAll();
+	public List<Person> getAllPersonsAlternative() {
+		return personRepository.findAll().stream().filter(person -> person.getId().equals(1)).toList();
 	}
 
 	public Person savePerson(Person person) {
