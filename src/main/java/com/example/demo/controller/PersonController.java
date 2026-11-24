@@ -27,6 +27,13 @@ public class PersonController {
         return "person";
     }
 
+    public String getPerson(
+    		@RequestParam(required = true) Long id,
+            Model model) {
+    	model.addAttribute("person", personService.getPerson(id));
+    	return "person";
+    }
+    
     @PostMapping
     public String savePerson(@ModelAttribute Person person) {
         personService.savePerson(person);
