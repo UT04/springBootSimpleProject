@@ -18,6 +18,7 @@ Dieses Projekt dient zum Testen und Üben mit Spring Boot, MVC, REST-APIs und Li
 - H2-Konsole: `http://localhost:8080/h2-console`
 - Zugangsdaten: leer lassen
 - **Aufgabe:** Füge eine weitere Spalte für die Telefonnummer hinzu. Setze die Änderung mit Liquibase um.
+- **Aufgabe (wenn Zeit ist und fortgeschritten):** Liquibase von h2 auf SQL-Lite umstellen.
 
 ### `restapi` – REST-API mit Swagger UI
 
